@@ -1,0 +1,14 @@
+<script src="aurora.js"></script>
+<script src="ogg.js"></script>
+<script src="vorbis.js"></script>
+
+<script type="text/javascript">
+
+var unsupported;
+if (!window.Audio || !('mozWriteAudio' in new Audio()) && !window.AudioContext && !window.webkitAudioContext) {
+    unsupported = true;
+}
+var url = 'https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg';
+var player = AV.Player.fromURL(url)
+player.play()
+</script>
